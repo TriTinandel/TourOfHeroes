@@ -1,4 +1,4 @@
-This is my README file for my new test project. I am writing something here for GIT change management testing purposes.
+This is my README file for my new test project. I am writing something here for GIT change management testing purposes. 
 # AngularTourOfHeroes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
