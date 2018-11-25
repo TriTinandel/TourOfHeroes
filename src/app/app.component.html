@@ -3,6 +3,12 @@
   <h1>
     {{ title }}
   </h1>
-  <app-heroes></app-heroes>
+  <nav>
+    <!--routerLink, specifically, is the directive used to interact with routing and let the user pick where they wanna go.-->
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/heroes/">Heroes</a>
+  </nav>
+  <!--router-outlet is a reserved angular term for showing the output of a route in a given location on a page.-->
+  <router-outlet></router-outlet>
   <app-messages></app-messages>
 </div>
