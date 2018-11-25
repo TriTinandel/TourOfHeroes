@@ -15,6 +15,11 @@ selectedHero: Hero
 onSelect(hero: Hero): void {
 this.selectedHero = hero;
 }
+
+refreshHeroesList() : void
+{
+  this.heroes = this.heroService.getnewHeroList();
+}
     
   constructor(private heroService: HeroService) {
     

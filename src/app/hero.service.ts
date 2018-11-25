@@ -14,5 +14,10 @@ export class HeroService {
     return of(HEROES);
   }
 
+  getnewHeroList(): Hero[] {
+    this.messageService.add("Fetched some heroes.");
+    return HEROES;
+  }
+
   constructor(private messageService: MessageService) { }
 }
