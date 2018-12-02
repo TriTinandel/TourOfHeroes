@@ -12,6 +12,9 @@ import { HeroService }  from '../hero.service';
 })
 export class HeroDetailComponent implements OnInit {
 
+  //@Input can almost be thought of as an inheritance or permissions thing. 
+  //Without this directive, "hero" is essentially private. You can only mess with it in this class.
+  //WITH @Input, the parent component can access it too.... very important for any kind of Detail component. Which are pretty damn important things.
   @Input() hero: Hero
 
   constructor(private route: ActivatedRoute,
@@ -37,4 +40,8 @@ export class HeroDetailComponent implements OnInit {
     this.location.back();
   }
 
+  save(): void {
+    this.heroService.updateHero(this.hero)
+      .subscribe(() => this.goBack());
+  }
 }
